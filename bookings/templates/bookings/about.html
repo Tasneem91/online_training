@@ -1,0 +1,34 @@
+{% extends 'bookings/base/base.html' %}
+{% load static %}
+{% block title %}You registered successfully{% endblock %}
+{% block site_css %}
+ <link rel="stylesheet" href="{% static 'bookings/styles/booking-details.css' %}">
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block body %}
+
+<h2 style="text-align:center">The Author</h2>
+   <article>
+        <img id = "main-image" src="{% static 'bookings/images/Tasnaim.jpg' %}" >
+        <section id="location">
+            <h2>OBJECTIVE</h2>
+            <p>To apply my knowledge in an environment that enables me to work in a real word Software Engineering, Data Science, Machine Learning, and AI projects in order to apply all my interests in real use cases.</p>
+        </section>
+        <section id="details">
+            <h2>SUMMARY</h2>
+            <p>Python Developer with a great passion for learning Machine Learning, Deep Learning and AI, and solid expertise in OOP.
+Professional trainer Python and data science fields with great enthusiasm for and keen interest in spreading and sharing knowledge with others.
+</p>          <h3>About the Project</h3>
+            <p>This site has been designed using Django, allowing students to browse Python courses and register for the suitable course, in addition to the ability to communicate with the professor.</p>
+
+        </section>
+        <section id="registration">
+            <h2>Contact Me</h2>
+            <a class="text-dark" href="mailto:tasnemhosen91@gmail.com">Tasnaim Hosen</a>
+        </section>
+    </article>
+{% endblock %}
+
+</html>

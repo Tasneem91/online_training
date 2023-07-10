@@ -1,0 +1,20 @@
+{% extends 'bookings/base/base.html' %}
+{% load static %}
+{% block title %}Online Courses{% endblock %}
+{% block site_css %}
+ <link rel="stylesheet" href="{% static 'bookings/styles/all-bookings.css' %}">
+{% endblock %}
+
+{% block body %}
+    <h2>We have great courses comming soon!!</h2>
+    <h3>Find the best course that is suitable for you</h3>
+    <section>
+        <h2>Upcoming Python Courses </h2>
+        <ol>
+            {% for booking in bookings %}
+              {% include 'bookings/includes/courses-items.html' with title=booking.title image=booking.image.url teacher=booking.teacher location=booking.location hours=booking.hours slug=booking.slug%}
+            {% endfor %}
+
+        </ol>
+    </section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'bookings/base/base.html' %}
+{% load static %}
+{% block title %}You registered successfully{% endblock %}
+{% block site_css %}
+ <link rel="stylesheet" href="{% static 'bookings/styles/registration-confirmation.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>Thanks for signing up!!</h1>
+<section id="confirmation">
+    <h2>You Registered Successfully!</h2>
+    <p>Thanks for signing up - see you in the course</p>
+    <p>If you have questions please <a href="mail_to: {{ organizer_email }}">contact the organizer</a>  ahead of time!</p>
+</section>
+
+<section id="continue">
+    <p>You can sign up for more than one course!!</p>
+    <p><a href="/bookings" class="btn"> Explore our courses</a></p>
+
+</section>
+{% endblock %}

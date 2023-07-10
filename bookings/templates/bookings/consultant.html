@@ -1,0 +1,24 @@
+{% extends 'bookings/base/base.html' %}
+{% load static %}
+{% block title %}You registered successfully{% endblock %}
+{% block site_css %}
+ <link rel="stylesheet" href="{% static 'bookings/styles/booking-details.css' %}">
+{% endblock %}
+{% block body %}
+
+<h2 style="text-align:center">Consultant</h2>
+   <article>
+        <img id = "main-image" src="{% static 'bookings/images/4406394.png' %}" >
+        <section id="location">
+            <h2>OBJECTIVE</h2>
+            <p>Many programmers, especially beginners, face some problems while working on their projects, especially their first projects, and they take a long time to solve the problem and may not be able to solve it.
+We are here to help you understand the problem and shorten the time and road for you.
+Do not hesitate when you encounter any problem with your project built in the Python programming language, contact us and we will be able to solve the problem together.</p>
+        </section>
+       <section id="registration">
+            <h2>For More Details Contact Us</h2>
+            <a class="text-dark" href="mailto:tasnemhosen91@gmail.com">Tasnaim Hosen</a>
+        </section>
+    </article>
+{% endblock %}
+

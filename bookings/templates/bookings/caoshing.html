@@ -1,0 +1,24 @@
+{% extends 'bookings/base/base.html' %}
+{% load static %}
+{% block title %}You registered successfully{% endblock %}
+{% block site_css %}
+ <link rel="stylesheet" href="{% static 'bookings/styles/booking-details.css' %}">
+{% endblock %}
+{% block body %}
+
+<h2 style="text-align:center">Coaching</h2>
+   <article>
+        <img id = "main-image" src="{% static 'bookings/images/4214146.png' %}" >
+        <section id="location">
+            <h2>OBJECTIVE</h2>
+            <p>The aim of this service is to provide customized training courses upon request. The student can communicate with the trainer and specify the topics he wants to learn related to the Python programming language. The course is designed according to the trainee's requirements and schedules for sessions and review sessions are set.
+Do not hesitate to contact us, whatever field you would like to learn in the Python programming language.
+We have a team of specialists waiting for you</p>
+        </section>
+       <section id="registration">
+            <h2>For More Details Contact Us</h2>
+            <a class="text-dark" href="mailto:tasnemhosen91@gmail.com">Tasnaim Hosen</a>
+        </section>
+    </article>
+{% endblock %}
+

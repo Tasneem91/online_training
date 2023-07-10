@@ -1,0 +1,44 @@
+{% extends 'bookings/base/base.html' %}
+{% load static %}
+{% block title %}Online Services{% endblock %}
+{% block site_css %}
+ <link rel="stylesheet" href="{% static 'bookings/styles/all-bookings.css' %}">
+{% endblock %}
+
+{% block body %}
+    <h2>We are here to help you learn and solve Problems!!</h2>
+    <section>
+        <h2>Our Services </h2>
+    </section>
+<section>
+  <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><b>Training Courses</b></h5>
+        <p class="card-text">Specialized courses designed accurately and with high quality, compatible with the requirements of the labor market</p>
+        <a href="/bookings" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><b>Coaching</b></h5>
+        <p class="card-text">You can reserve your own training,and we will be a minister for you and follow you until you achieve your goals</p>
+        <a href="{% url 'coaching' %}" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+      <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><b>Consultant</b></h5>
+        <p class="card-text">You can reserve your free consultation for the first hour, through which we will help you solve the problem you face in your project</p>
+        <a href="{% url 'consultant' %}" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}

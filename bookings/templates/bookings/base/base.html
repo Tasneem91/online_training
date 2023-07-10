@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  color: white;
+}
+</style>
+    <meta charset="UTF-8">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>{% block title %} Courses {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bookings/styles/base.css'%}">
+    {% block site_css %} {% endblock %}
+</head>
+<body>
+<header id="main-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #38018F">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}" style="color: black">Home</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/bookings" style="color: black">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'coaching' %}" style="color: black">Coaching</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'consultant' %}" style="color: black">Consultant</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}" style="color: black">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <h3>{% block main_heading %} {% endblock %}</h3>
+    {% block header_content %} {% endblock %}
+</header>
+<main>
+{% block body %} {% endblock %}
+</main>
+</body>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #CFC6D8">
+    © 2023 Copyright:
+    <a class="text-dark" href="mailto:tasnemhosen91@gmail.com">Tasnaim Hosen</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</html>
